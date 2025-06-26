@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp:*)",
+      "Bash(npm install)",
+      "Bash(npm config delete:*)",
+      "Bash(ls:*)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(npm run dev:*)",
+      "Bash(grep:*)",
+      "Bash(npm install:*)"
+    ],
+    "deny": []
+  }
+}
