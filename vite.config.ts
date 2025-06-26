@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 import path from 'path'
 
 // Handle both CJS and ESM environments
-const __dirname = typeof __dirname !== 'undefined' 
+const currentDir = typeof __dirname !== 'undefined' 
   ? __dirname 
   : path.dirname(fileURLToPath(import.meta.url))
 
@@ -13,9 +13,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(currentDir, './src'),
     },
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
+  },
+  esbuild: {
+    target: 'es2020',
   },
   define: {
     global: 'globalThis',
@@ -27,5 +30,11 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000,
+  },
+  build: {
+    target: 'es2020',
+    rollupOptions: {
+      external: [],
+    },
   },
 })
