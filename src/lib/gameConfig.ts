@@ -30,7 +30,7 @@ export const GAME_CONFIG: GameConfig = {
 
 // MultiSynq Configuration
 export const MULTISYNQ_CONFIG = {
-  apiKey: '26wkxFZ3H7RPbicB78x7NASFTCcUasWQkFfeWsLHXt',
+  apiKey: import.meta.env.VITE_MULTISYNQ_API_KEY || '',
   appId: 'io.monad.tankbattle',
   // Session will be auto-generated or can be set manually
 }
