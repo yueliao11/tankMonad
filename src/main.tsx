@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import App from './App.tsx'
-import { Web3Provider } from './lib/index.ts'
+import { Web3Provider } from './web3Context.tsx'
 import './lib/web3.ts' // Initialize AppKit
 import './index.css'
 

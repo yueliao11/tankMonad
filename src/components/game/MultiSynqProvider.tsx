@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import * as Multisynq from '@multisynq/client'
-import { useAccount } from '../../lib/web3Context.tsx'
+import { useAccount } from '../../web3Context.tsx'
 import { useGameStore } from '../../store/gameStore.ts'
 import { useAuthStore } from '../../store/authStore.ts'
 import { MULTISYNQ_CONFIG } from '../../lib/gameConfig.ts'

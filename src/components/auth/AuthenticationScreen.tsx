@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useAccount, useNetwork } from '../../lib/web3Context.tsx'
+import { useAccount, useNetwork } from '../../web3Context.tsx'
 import { useAppKit } from '@reown/appkit/react'
 import { useAuthStore } from '../../store/authStore.ts'
 import LoadingSpinner from '../ui/LoadingSpinner.tsx'

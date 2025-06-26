@@ -1,4 +1,4 @@
-import { useAccount } from './lib/web3Context.tsx'
+import { useAccount } from './web3Context.tsx'
 import AuthenticationScreen from './components/auth/AuthenticationScreen.tsx'
 import GameScreen from './components/game/GameScreen.tsx'
 import { useAuthStore } from './store/authStore.ts'

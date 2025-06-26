@@ -1,4 +1,4 @@
-import { useAccount } from './lib/web3Context.tsx'
+import { useAccount } from './web3Context.tsx'
 import { useAppKit } from '@reown/appkit/react'
 
 function SimpleApp() {
