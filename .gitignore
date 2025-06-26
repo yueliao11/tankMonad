@@ -23,7 +23,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -205,8 +206,10 @@ dist/
 downloads/
 eggs/
 .eggs/
+# Ignore lib directories except src/lib
 lib/
 lib64/
+!src/lib/
 parts/
 sdist/
 var/
