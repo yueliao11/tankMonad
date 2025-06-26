@@ -16,6 +16,7 @@ class MonsterModel extends Multisynq.Model implements Monster {
   state: 'idle' | 'chasing' | 'attacking' = 'idle'
   target?: string
   lastAttack: number = 0
+  isAlive: boolean = true
   
   aiData = {
     wanderDirection: 0,

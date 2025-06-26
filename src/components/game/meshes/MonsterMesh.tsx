@@ -130,7 +130,7 @@ const MonsterMesh: React.FC<MonsterMeshProps> = ({ monster }) => {
           [-0.6, 0, 0.7],
           [0.6, 0, 0.7]
         ].map((pos, index) => (
-          <mesh key={index} position={pos} castShadow>
+          <mesh key={index} position={pos as [number, number, number]} castShadow>
             <cylinderGeometry args={[0.15, 0.2, 0.8, 6]} />
             <meshStandardMaterial 
               color={new THREE.Color(getMonsterColor()).multiplyScalar(0.7)}

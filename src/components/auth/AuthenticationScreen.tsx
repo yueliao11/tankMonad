@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useAccount, useSignMessage, useNetwork } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { SiweMessage } from 'siwe'

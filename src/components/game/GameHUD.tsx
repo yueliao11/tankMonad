@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGameStore } from '@/store/gameStore'
 import { formatTime } from '@/lib/utils'
-import { Trophy, Heart, Target, Users, Clock, Zap } from 'lucide-react'
+import { Trophy, Heart, Target, Users, Clock } from 'lucide-react'
 import WeaponHUD from './WeaponHUD'
 import { WeaponSystem, WeaponType } from '@/lib/weaponSystem'
 
@@ -10,7 +10,7 @@ const GameHUD: React.FC = () => {
   
   // Initialize weapon system for this player
   const [weaponSystem] = useState(() => new WeaponSystem(WeaponType.CANNON, WeaponType.MACHINE_GUN))
-  const [showWeaponHUD, setShowWeaponHUD] = useState(true)
+  const [showWeaponHUD] = useState(true)
 
   const healthPercentage = (hudData.health / hudData.maxHealth) * 100
 

@@ -45,7 +45,7 @@ const initialInputState: InputState = {
   mouseY: 0,
 }
 
-export const useGameStore = create<GameStore>((set, get) => ({
+export const useGameStore = create<GameStore>((set, _get) => ({
   gameState: null,
   session: null,
   isConnected: false,

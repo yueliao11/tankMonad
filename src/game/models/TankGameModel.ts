@@ -1,6 +1,6 @@
 import * as Multisynq from '@multisynq/client'
-import { GameState, Player, Monster, Bullet, ViewData } from '@/types'
-import { GAME_CONFIG, AI, NETWORK, GAME_STATES } from '@/lib/gameConfig'
+import { GameState, ViewData } from '@/types'
+import { GAME_CONFIG, NETWORK, GAME_STATES } from '@/lib/gameConfig'
 import TankModel from './TankModel'
 import MonsterModel from './MonsterModel'
 import BulletModel from './BulletModel'

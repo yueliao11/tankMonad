@@ -31,7 +31,7 @@ const ObstacleRenderer: React.FC<ObstacleRendererProps> = ({ obstacles }) => {
     }),
   }), [])
 
-  const getObstacleColor = (obstacle: Obstacle) => {
+  /* const getObstacleColor = (obstacle: Obstacle) => { // unused
     if (!obstacle.destructible) return materials[obstacle.material].color
 
     const healthPercent = (obstacle.health || 0) / (obstacle.maxHealth || 1)
@@ -40,7 +40,7 @@ const ObstacleRenderer: React.FC<ObstacleRendererProps> = ({ obstacles }) => {
     if (healthPercent > 0.6) return materials[obstacle.material].color
     if (healthPercent > 0.3) return new THREE.Color('#CC6600') // Orange when damaged
     return new THREE.Color('#CC0000') // Red when critically damaged
-  }
+  } */
 
   return (
     <>

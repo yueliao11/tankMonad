@@ -140,7 +140,7 @@ const DebugOverlay: React.FC = () => {
           
           {gameState?.gameState === 'playing' && (
             <div className="mt-2 text-green-400 text-xs">
-              🎮 Game active! Time remaining: {Math.ceil((gameState.timeRemaining || 0) / 1000)}s
+              🎮 Game active! Time remaining: {Math.ceil((gameState.roundTimeRemaining || 0) / 1000)}s
             </div>
           )}
         </div>

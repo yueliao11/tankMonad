@@ -15,7 +15,7 @@ import ObstacleRenderer from './ObstacleRenderer'
 const SimpleTank: React.FC<{ position: [number, number, number]; color: string }> = ({ position, color }) => {
   const meshRef = useRef<THREE.Group>(null)
   
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.y += delta * 0.5
     }
@@ -46,7 +46,7 @@ const SimpleTank: React.FC<{ position: [number, number, number]; color: string }
 const SimpleMonster: React.FC<{ position: [number, number, number] }> = ({ position }) => {
   const meshRef = useRef<THREE.Mesh>(null)
   
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += delta * 2
       meshRef.current.rotation.z += delta

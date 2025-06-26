@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAccount } from 'wagmi'
 import AuthenticationScreen from './components/auth/AuthenticationScreen'
 import GameScreen from './components/game/GameScreen'

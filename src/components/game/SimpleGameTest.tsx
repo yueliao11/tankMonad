@@ -5,7 +5,7 @@ import * as THREE from 'three'
 const TestCube: React.FC = () => {
   const meshRef = useRef<THREE.Mesh>(null)
   
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += delta
       meshRef.current.rotation.y += delta * 0.5

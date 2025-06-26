@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGameStore } from '@/store/gameStore'
-import { Wifi, WifiOff, AlertCircle } from 'lucide-react'
+import { WifiOff, AlertCircle } from 'lucide-react'
 
 const ConnectionStatus: React.FC = () => {
   const { isConnected, connectionError } = useGameStore()

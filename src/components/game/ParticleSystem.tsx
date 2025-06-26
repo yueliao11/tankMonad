@@ -351,7 +351,7 @@ const ParticleSystem: React.FC<ParticleSystemProps> = ({
   }, [particles.length, config])
 
   // Emit new particles
-  const emitParticles = (count: number, currentTime: number) => {
+  const emitParticles = (count: number, _currentTime: number) => {
     let emitted = 0
     
     for (let i = 0; i < particles.length && emitted < count; i++) {
@@ -399,7 +399,7 @@ const ParticleSystem: React.FC<ParticleSystemProps> = ({
   }
 
   // Update particles
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (!active) return
 
     const currentTime = Date.now()
@@ -450,7 +450,6 @@ const ParticleSystem: React.FC<ParticleSystemProps> = ({
           activeCount++
           
           // Update buffer attributes
-          const i3 = index * 3
           positions.setXYZ(index, particle.position.x, particle.position.y, particle.position.z)
           colors.setXYZ(index, particle.color.r, particle.color.g, particle.color.b)
           sizes.setX(index, currentSize)
@@ -458,7 +457,6 @@ const ParticleSystem: React.FC<ParticleSystemProps> = ({
         }
       } else {
         // Hide inactive particles
-        const i3 = index * 3
         positions.setXYZ(index, 0, 0, 0)
         colors.setXYZ(index, 0, 0, 0)
         sizes.setX(index, 0)

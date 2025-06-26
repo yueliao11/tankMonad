@@ -10,7 +10,7 @@ interface BulletMeshProps {
 
 const BulletMesh: React.FC<BulletMeshProps> = ({ bullet }) => {
   const groupRef = useRef<THREE.Group>(null)
-  const trailRef = useRef<THREE.Mesh>(null)
+  // const trailRef = useRef<THREE.Mesh>(null) // unused
   
   // Interpolation targets for smooth movement
   const targetPosition = useRef(new THREE.Vector3(bullet.position.x, bullet.position.y, bullet.position.z))
@@ -97,7 +97,7 @@ const BulletMesh: React.FC<BulletMeshProps> = ({ bullet }) => {
             if (index === 0) return null
             
             const prevPos = trailPositions.current[index - 1]
-            const distance = pos.distanceTo(prevPos)
+            // const distance = pos.distanceTo(prevPos) // unused
             const midPoint = new THREE.Vector3().addVectors(pos, prevPos).multiplyScalar(0.5)
             
             const trailOpacity = (index / trailPositions.current.length) * opacity * 0.5

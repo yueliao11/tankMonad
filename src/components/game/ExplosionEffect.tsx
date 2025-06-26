@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
@@ -32,7 +32,7 @@ const ExplosionEffect: React.FC<ExplosionEffectProps> = ({
     }))
   })
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (!groupRef.current) return
 
     const elapsed = Date.now() - startTime
@@ -96,7 +96,7 @@ const ExplosionEffect: React.FC<ExplosionEffectProps> = ({
       </mesh>
 
       {/* Particle debris */}
-      {particles.map((particle, index) => (
+      {particles.map((particle) => (
         <mesh key={particle.id} position={[0, 0, 0]}>
           <sphereGeometry args={[particle.size]} />
           <meshBasicMaterial 

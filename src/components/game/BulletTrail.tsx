@@ -13,7 +13,7 @@ const BulletTrail: React.FC<BulletTrailProps> = ({ bullet }) => {
   const trailGroupRef = useRef<THREE.Group>(null)
   const [trailPositions, setTrailPositions] = useState<THREE.Vector3[]>([])
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (!meshRef.current) return
 
     // Update bullet position
@@ -63,7 +63,7 @@ const BulletTrail: React.FC<BulletTrailProps> = ({ bullet }) => {
         castShadow
       >
         <sphereGeometry args={[0.08]} />
-        <meshBasicMaterial 
+        <meshStandardMaterial 
           color={COLORS.BULLET_COLOR}
           emissive={COLORS.BULLET_COLOR}
           emissiveIntensity={0.3}

@@ -124,7 +124,7 @@ const EnhancedBulletTrail: React.FC<EnhancedBulletTrailProps> = ({ projectile })
   }, [projectile.trail])
 
   // Animation and effects
-  useFrame((state, delta) => {
+  useFrame((state, _delta) => {
     if (meshRef.current) {
       // Update projectile position
       meshRef.current.position.set(
@@ -135,7 +135,7 @@ const EnhancedBulletTrail: React.FC<EnhancedBulletTrailProps> = ({ projectile })
 
       // Rotation animation for certain projectiles
       if (projectile.weaponType === WeaponType.ROCKET || projectile.weaponType === WeaponType.SNIPER) {
-        meshRef.current.rotation.z += delta * 10
+        meshRef.current.rotation.z += _delta * 10
       }
 
       // Plasma glow effect
@@ -174,7 +174,7 @@ const EnhancedBulletTrail: React.FC<EnhancedBulletTrailProps> = ({ projectile })
 
       {/* Trail */}
       {projectile.trail.length > 1 && !projectile.hasExploded && (
-        <line ref={trailRef} geometry={trailGeometry} material={trailMaterial} />
+        <primitive object={new THREE.Line(trailGeometry, trailMaterial)} ref={trailRef} />
       )}
 
       {/* Special effects */}
@@ -261,7 +261,7 @@ const ExplosionEffect: React.FC<{
     Math.min(50, Math.max(10, splashRadius * 5))
   )
 
-  useFrame((state, delta) => {
+  useFrame((state, _delta) => {
     if (explosionRef.current) {
       // Expand explosion
       const scale = Math.min(3, state.clock.elapsedTime * 5)
@@ -398,7 +398,7 @@ function getExplosionColor(weaponType: WeaponType, ammoType: AmmoType): string {
   return '#FF8800'
 }
 
-function createExplosionEffect(group: THREE.Group, projectile: Projectile) {
+function createExplosionEffect(_group: THREE.Group, _projectile: Projectile) {
   // This function could be expanded to create more complex particle systems
   // For now, it's handled by the ExplosionEffect component
 }

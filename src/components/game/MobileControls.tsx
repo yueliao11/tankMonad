@@ -40,7 +40,7 @@ const MobileControls: React.FC = () => {
   const aimTouchId = useRef<number | null>(null)
   
   // Control settings
-  const [settings, setSettings] = useState({
+  const [settings] = useState({
     joystickDeadZone: 0.1,
     joystickSensitivity: 1.0,
     hapticFeedback: true,
