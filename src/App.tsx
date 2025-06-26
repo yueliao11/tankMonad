@@ -1,7 +1,7 @@
-import { useAccount } from './lib/web3Context'
-import AuthenticationScreen from './components/auth/AuthenticationScreen'
-import GameScreen from './components/game/GameScreen'
-import { useAuthStore } from './store/authStore'
+import { useAccount } from './lib/web3Context.tsx'
+import AuthenticationScreen from './components/auth/AuthenticationScreen.tsx'
+import GameScreen from './components/game/GameScreen.tsx'
+import { useAuthStore } from './store/authStore.ts'
 
 function App() {
   const { isConnected } = useAccount()

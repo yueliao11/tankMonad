@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { useAccount, useNetwork } from '../../lib/web3Context'
+import { useAccount, useNetwork } from '../../lib/web3Context.tsx'
 import { useAppKit } from '@reown/appkit/react'
-import { useAuthStore } from '../../store/authStore'
-import LoadingSpinner from '../ui/LoadingSpinner'
-import { switchToMonadTestnet } from '../../lib/web3'
+import { useAuthStore } from '../../store/authStore.ts'
+import LoadingSpinner from '../ui/LoadingSpinner.tsx'
+import { switchToMonadTestnet } from '../../lib/web3.ts'
 
 const AuthenticationScreen: React.FC = () => {
   const { address } = useAccount()
