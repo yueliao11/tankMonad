@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiConfig } from 'wagmi'
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import App from './App'
-import { wagmiConfig, chains } from '@/lib/wagmi'
+import { wagmiConfig, chains } from './lib/wagmi'
 import './index.css'
 
 import '@rainbow-me/rainbowkit/styles.css'

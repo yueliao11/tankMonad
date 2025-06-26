@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "type-check": "tsc --noEmit",
     "build-with-check": "tsc && vite build",
+    "build-debug": "vite build --mode production --minify false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
