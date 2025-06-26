@@ -2,6 +2,7 @@ import React, { useRef, useMemo, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Projectile, WeaponType, AmmoType } from '@/lib/weaponSystem'
+import { Position } from '@/types'
 
 interface EnhancedBulletTrailProps {
   projectile: Projectile
@@ -119,7 +120,7 @@ const EnhancedBulletTrail: React.FC<EnhancedBulletTrailProps> = ({ projectile })
 
   // Create trail geometry from trail positions
   const trailGeometry = useMemo(() => {
-    const points = projectile.trail.map(pos => new THREE.Vector3(pos.x, pos.y, pos.z))
+    const points = projectile.trail.map((pos: Position) => new THREE.Vector3(pos.x, pos.y, pos.z))
     return new THREE.BufferGeometry().setFromPoints(points)
   }, [projectile.trail])
 
@@ -152,7 +153,7 @@ const EnhancedBulletTrail: React.FC<EnhancedBulletTrailProps> = ({ projectile })
 
     // Update trail
     if (trailRef.current && projectile.trail.length > 1) {
-      const points = projectile.trail.map(pos => new THREE.Vector3(pos.x, pos.y, pos.z))
+      const points = projectile.trail.map((pos: Position) => new THREE.Vector3(pos.x, pos.y, pos.z))
       trailRef.current.geometry.setFromPoints(points)
     }
   })

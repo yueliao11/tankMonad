@@ -121,11 +121,11 @@ const HealthBar: React.FC<HealthBarProps> = ({
         </div>
 
         {/* Active Abilities */}
-        {armorStatus && armorStatus.abilities.some(a => a.active) && (
+        {armorStatus && armorStatus.abilities.some((a: any) => a.active) && (
           <div className="text-xs text-center text-yellow-400 animate-pulse">
             {armorStatus.abilities
-              .filter(a => a.active)
-              .map(a => a.type.toUpperCase())
+              .filter((a: any) => a.active)
+              .map((a: any) => a.type.toUpperCase())
               .join(' ')}
           </div>
         )}
