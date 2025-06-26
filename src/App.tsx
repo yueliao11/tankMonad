@@ -1,4 +1,4 @@
-import { useAccount } from 'wagmi'
+import { useAccount } from './lib/web3Context'
 import AuthenticationScreen from './components/auth/AuthenticationScreen'
 import GameScreen from './components/game/GameScreen'
 import { useAuthStore } from './store/authStore'

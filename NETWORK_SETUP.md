@@ -17,9 +17,7 @@ The game will automatically prompt you to add and switch to Monad Testnet when y
 ### Steps:
 1. **Connect Wallet** - Click "Connect Wallet" and select your wallet
 2. **Add Network** - If not on Monad, click "Switch to Monad Testnet"
-3. **Approve in Wallet** - Confirm the network addition in your wallet
-4. **Sign Message** - Complete SIWE authentication
-5. **Start Gaming** - Enter the battle arena!
+3. **Start Gaming** - Enter the battle arena automatically!
 
 ## 🛠️ Manual Network Setup
 

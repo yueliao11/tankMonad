@@ -560,3 +560,18 @@ src/
 ---
 
 使用 ❤️ 为Monad生态系统构建
+
+## 🔐 认证流程
+
+### 简化的认证步骤
+1. **连接钱包** - 点击"Connect Wallet"选择你的钱包
+2. **网络切换** - 如果不在Monad网络，点击"Switch to Monad Testnet"
+3. **开始游戏** - 连接成功后自动进入游戏！
+
+> **注意**: 我们已经移除了签名消息(SIWE)步骤，现在只需要连接钱包即可开始游戏。
+
+### 支持的钱包
+- MetaMask
+- WalletConnect 兼容钱包
+- Coinbase Wallet
+- 其他 Web3 钱包
